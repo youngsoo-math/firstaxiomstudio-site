@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Support - First Axiom Studio</title>
+    <meta name="description"
+        content="Support and FAQs for Sudoku by First Axiom Studio. Learn how to manage your account and delete your data.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0c;
+            --text: #f0f0f5;
+            --text-dim: #a0a0b0;
+            --accent: #00d2ff;
+            --heading: #fff;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        .light-theme {
+            --bg: #f5f5f7;
+            --text: #1d1d1f;
+            --text-dim: #424245;
+            --accent: #0071e3;
+            --heading: #1d1d1f;
+            --glass-bg: rgba(0, 0, 0, 0.02);
+            --glass-border: rgba(0, 0, 0, 0.06);
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root:not(.dark-theme) {
+                --bg: #f5f5f7;
+                --text: #1d1d1f;
+                --text-dim: #424245;
+                --accent: #0071e3;
+                --heading: #1d1d1f;
+                --glass-bg: rgba(0, 0, 0, 0.02);
+                --glass-border: rgba(0, 0, 0, 0.06);
+            }
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem;
+        }
+
+        h1 {
+            color: var(--accent);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        h2 {
+            margin-top: 2rem;
+            color: var(--heading);
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            font-weight: 600;
+        }
+
+        p, li {
+            color: var(--text-dim);
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .highlight-box {
+            background: rgba(0, 210, 255, 0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid rgba(0, 210, 255, 0.1);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 2rem 1rem;
+            }
+            .container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    <script>
+        const theme = localStorage.getItem('theme');
+        if (theme) {
+            document.documentElement.classList.add(theme + '-theme');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sudoku Support</h1>
+        
+        <section id="account-deletion">
+            <h2>Account Deletion</h2>
+            <p>We respect your privacy and your right to control your data. If you wish to delete your Sudoku account and all associated personal information, please follow these steps within the app:</p>
+            
+            <div class="highlight-box">
+                <ol>
+                    <li>Open the <strong>Main Menu</strong> of the Sudoku app.</li>
+                    <li>Press the <strong>Profile Button</strong> (located at the top of the menu).</li>
+                    <li>Choose the <strong>Delete Account</strong> option from the profile screen.</li>
+                </ol>
+            </div>
+            
+            <p>Once confirmed, your account will be immediately de-identified. This action is permanent and cannot be undone.</p>
+        </section>
+
+        <section id="data-retention">
+            <h2>What happens to my data?</h2>
+            <p>Upon account deletion, your personal identity information is removed from our systems. Some non-identifiable data—such as item usage, transaction history, and achievements—will be retained in an <strong>anonymized state</strong> for historical and analytical purposes.</p>
+            <p>Our retention policy ensures that these anonymized records remain part of our system integrity for a limited time. This remaining data is automatically purged from our systems within <strong>1 to 5 years</strong>, depending on the data category.</p>
+        </section>
+
+        <section id="further-assistance">
+            <h2>Further Assistance</h2>
+            <p>If you encounter any issues with the account deletion process or have further questions regarding your data, please reach out to our support team:</p>
+            <p><a href="mailto:support@firstaxiomstudio.com">support@firstaxiomstudio.com</a></p>
+        </section>
+
+        <a href="/" class="back-link">&larr; Return to Home</a>
+    </div>
+</body>
+
+</html>
